@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Money converter</title>
+</head>
+<body>
+  <h1>Money Converter</h1>
+  <!-- https://api.exchangerate.host/latest?amount=5000&base=USD-->
+  <label>Amount:</label>
+  <input type="number" name="amount" id="amount"> <br><br>
+  <label>From:</label>
+  <select name="from" id="from">
+    <option value="BRL">Reais</option>
+    <option value="USD">Dólar Americano</option>
+    <option value="JPY">Ienes</option>
+    <option value="EUR">Euro</option>
+  </select>
+  <label>To:</label>
+  <select name="to" id="to">
+    <option value="BRL">Reais</option>
+    <option value="USD">Dólar Americano</option>
+    <option value="JPY">Ienes</option>
+    <option value="EUR">Euro</option>
+  </select>
+  <br><br>
+  <label>Result:</label>
+  <span id="result"></span> <br><br>
+  <button id="convertBtn">Convert values</button>
+</body>
+<script src="./dist/bundle.js"></script>
+</html>
