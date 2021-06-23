@@ -1,7 +1,11 @@
-import baseUrl from '../util/Const';
+import { BASE_URL as baseUrl } from '../util/Const';
 
-export default class ConverterService {
-  static async getAmountConverted<T>(
+export interface exchangerateHostResponse {
+  rates: { [key: string]: number };
+}
+
+export class ConverterService {
+  static async getExchangeRates<T>(
     amount: string,
     fromCurrency: string,
     toCurrency: string
