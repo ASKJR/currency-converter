@@ -5,19 +5,19 @@ import {
 import { Locale } from '../util/Const';
 
 export default class Converter {
-  private amount: number;
+  private amount;
 
-  private fromCurrency: string;
+  private fromCurrency;
 
-  private toCurrency: string;
+  private toCurrency;
 
-  constructor(amount: number, fromCurrency: string, toCurrency: string) {
+  public constructor(amount: number, fromCurrency: string, toCurrency: string) {
     this.amount = amount;
     this.fromCurrency = fromCurrency;
     this.toCurrency = toCurrency;
   }
 
-  async exchange(): Promise<string> {
+  public async exchange(): Promise<string> {
     const response =
       await ConverterService.getExchangeRates<exchangerateHostResponse>(
         this.amount.toString(),

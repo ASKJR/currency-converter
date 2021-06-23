@@ -2,7 +2,7 @@
   "name": "money-converter",
   "version": "1.0.0",
   "description": "web money converter. frontend app",
-  "main": "./src/App.ts",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"

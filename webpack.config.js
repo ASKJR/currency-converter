@@ -6,7 +6,7 @@ module.exports = {
   mode: "production",
 
   // entry files
-  entry: "./src/App.ts",
+  entry: "./index.ts",
 
   // output bundles (location)
   output: {
