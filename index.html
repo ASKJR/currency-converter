@@ -4,31 +4,55 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Money converter</title>
+  <title>Currency converter</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/skeleton.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+  <link rel="manifest" href="./site.webmanifest.json">
 </head>
 <body>
-  <h1>Money Converter</h1>
-  <!-- https://api.exchangerate.host/latest?amount=5000&base=USD-->
-  <label>Amount:</label>
-  <input type="number" name="amount" id="amount"> <br><br>
-  <label>From:</label>
-  <select name="from" id="from">
-    <option value="BRL">Reais</option>
-    <option value="USD">Dólar Americano</option>
-    <option value="JPY">Ienes</option>
-    <option value="EUR">Euro</option>
-  </select>
-  <label>To:</label>
-  <select name="to" id="to">
-    <option value="BRL">Reais</option>
-    <option value="USD">Dólar Americano</option>
-    <option value="JPY">Ienes</option>
-    <option value="EUR">Euro</option>
-  </select>
-  <br><br>
-  <label>Result:</label>
-  <span id="result"></span> <br><br>
-  <button id="convertBtn">Convert values</button>
+  <div class="container">
+    <h4>Currency Converter</h4>
+    <div class="row">
+      <div class="twelve columns">
+        <label for="amountLbl">Amount:</label>
+        <input type="number" class="u-full-width" name="amount" id="amount">
+      </div>
+    </div>
+    <div class="row">
+      <div class="six columns">
+        <label for="fromLbl">From:</label>
+        <select name="from" id="from" class="u-full-width">
+          <option value="BRL">Brazilian Real</option>
+          <option value="USD">US Dollar</option>
+          <option value="JPY">Japan Yen</option>
+          <option value="EUR">Euro</option>
+        </select>
+      </div>
+      <div class="six columns">
+        <label for="toLbl">To:</label>
+        <select name="to" id="to" class="u-full-width">
+          <option value="BRL">Brazilian Real</option>
+          <option value="USD">US Dollar</option>
+          <option value="JPY">Japan Yen</option>
+          <option value="EUR">Euro</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="six columns">
+        <button id="convertBtn">Convert</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="twelve columns resultBox">
+        <h2 id="result"></h2>
+      </div>
+    </div>
+  </div>
 </body>
 <script src="./dist/bundle.js"></script>
 </html>
