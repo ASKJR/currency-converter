@@ -1,23 +1,15 @@
-version: '2'
-
+version: '3'
 services:
-  currency-converter:
+  web:
+    image: nginx:stable-alpine
     container_name: web.currency-converter
     environment:
       - VIRTUAL_HOST=currency-converter.albertokato.com.br
-      - VIRTUAL_PORT=80
-    build:
-      context: .
-      dockerfile: Dockerfile
-    volumes:
-      - .:/app
-      - /app/node_modules
     expose:
       - '80'
-    external_links:
-      - web.nginx-proxy
+    volumes:
+      - './:/usr/share/nginx/html'
     restart: always
-    working_dir: /app
 
 networks:
   default:
