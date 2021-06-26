@@ -6,6 +6,7 @@
   <li>Typescript</li>
   <li>Mocha & Chai for testing</li>
   <li>Eslint - Airbnb Style</li>
+  <li>Skeleton: CSS Boilerplate</li>
   <li>Webpack</li>
 </ul>
 
