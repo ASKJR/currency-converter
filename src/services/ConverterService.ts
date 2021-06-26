@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { BASE_URL as baseUrl } from '../util/Const';
 
 export interface exchangerateHostResponse {
@@ -12,8 +13,8 @@ export class ConverterService {
   ): Promise<T> {
     try {
       const url = `${baseUrl}?amount=${amount}&base=${fromCurrency}&symbols=${toCurrency}`;
-      const response = await fetch(url);
-      return response.json() as Promise<T>;
+      const response = await axios.get<T>(url);
+      return response.data;
     } catch (error) {
       console.log(error);
       throw error;
