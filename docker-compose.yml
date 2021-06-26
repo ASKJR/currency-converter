@@ -1,0 +1,26 @@
+version: '2'
+
+networks:
+  default:
+    external:
+      name: main
+
+services:
+  volvo-api:
+    build: .
+    container_name: web.currency-converter
+    environment:
+      - NODE_ENV=production
+      - VIRTUAL_HOST=currency-converter.albertokato.com.br
+      - VIRTUAL_PORT=3000
+    expose:
+      - '3000'
+    external_links:
+      - nginx-proxy.web-base
+    volumes:
+      - .:/application
+      - .:/mnt/base
+      - /application/node_modules
+    working_dir: /application
+    entrypoint: npm
+    command: run production
