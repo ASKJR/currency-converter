@@ -6,7 +6,7 @@ networks:
       name: main
 
 services:
-  volvo-api:
+  currency-converter:
     build: .
     container_name: web.currency-converter
     environment:
