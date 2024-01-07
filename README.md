@@ -29,5 +29,5 @@ Once the build is complete, just double click on index.html file.
 
 
 ### Live demo
-https://currency-converter.albertokato.com.br/
+https://currency-converter.albertokato.com/
 
